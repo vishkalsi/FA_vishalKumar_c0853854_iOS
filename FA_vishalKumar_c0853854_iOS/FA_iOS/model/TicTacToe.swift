@@ -85,14 +85,12 @@ class TicTacToe {
     private func checkForWin() -> Bool {
         guard numberOfMoves > 4 else { return false }
 
-        // check for forward diagonal
         if board[0][0] == player,
            board[1][1] == player,
            board[2][2] == player {
             return true
         }
 
-        // check for backward diagonal
         if board[0][2] == player,
            board[1][1] == player,
            board[2][0] == player {
@@ -100,14 +98,12 @@ class TicTacToe {
         }
 
         for i in 0...2 {
-            // check for horizontal
             if board[i][0] == player,
                board[i][1] == player,
                board[i][2] == player {
                 return true
             }
 
-            // check for vertical
             if board[0][i] == player,
                board[1][i] == player,
                board[2][i] == player {

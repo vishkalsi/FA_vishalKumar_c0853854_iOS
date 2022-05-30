@@ -30,26 +30,6 @@ class MainViewController: UIViewController, TicTacToeDelegate {
     func restoreState() {
         xWins = LocalStorage.value(defaultValue: 0, forKey: LocalStorage.X_SCORE)
         oWins = LocalStorage.value(defaultValue: 0, forKey: LocalStorage.O_SCORE)
-//        let oldGame = LocalStorage.value(defaultValue: "", forKey: LocalStorage.GAME)
-//        print("Game", oldGame)
-//        var i = 0
-//        var j = 0
-//        var count = 0
-//        for char in oldGame {
-//            if(char == "X" || char == "O") {
-//                allButtons[count].isEnabled = false
-//                let player = game.getPlayer(player: char)
-//                allButtons[count].setTitle(player.rawValue, for: .normal)
-//                allButtons[count].setTitleColor(player.color, for: .disabled)
-//                game.player(didChoose: (i, j))
-//            }
-//            count += 1
-//            j += 1
-//            if(j%3 == 0) {
-//                j = 0
-//                i += 1
-//            }
-//        }
         printScore()
     }
     
@@ -111,7 +91,6 @@ class MainViewController: UIViewController, TicTacToeDelegate {
             $0.titleLabel?.font = .boldSystemFont(ofSize: 90)
         }
         bottomLabel.text = currentPlayer
-//        saveState()
     }
 
     
